@@ -1,0 +1,918 @@
+<doctype html>
+    <html lang="ko">
+        <head>
+            <title>PS4 | RULIWEB</title>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- 합쳐지고 최소화된 최신 CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+            <!--Noto Sans KR-->
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        </body>
+        <style>
+            .ol,ul{
+                list-style:none;
+            }
+            a{
+                color:#000;
+            }
+            .login_button:focus{
+                outline:none;
+            }
+            .search{
+                margin-top:30px;
+            }
+            .search_button{
+                background-color:#1a70dc;
+                color:white;
+                border:3px solid#1a70dc;
+                border-radius:0;
+                padding:6px 10px 10px 7px;
+                margin-left:-5px;
+            }
+            .search_input{
+                width:225px;
+                border:3px solid#1a70dc;
+                padding:5px 5px 5px 10px;
+            }
+            .search_button{
+                outline:none;
+            }
+            .search_input:focus{
+                outline:none;
+            }
+            .col-md-3.logo{
+                margin:20px 0 50px 0;
+            }
+            .menu{
+                font-size:14px;
+                list-style:none;
+                margin:0;
+                padding:0 4px 0 4px;
+            }
+            .menu_highlight{
+                color:#1a70dc;
+                font-weight:bold;
+                padding:0 4px 0 4px;
+                margin:0;
+            }
+            img{
+                padding:0 0 0 0;
+            }
+            li{
+                margin: 0 0 0 5;
+                padding: 0 0 0 0;
+                border: 0;
+                float: left;
+            }
+            .mini_quick{
+                color:#1a70dc;
+                font-weight:bold;
+            }
+            .mini_area.col-md-12{
+                text-align:right;
+                margin-top:10px;
+            }
+            .title{
+                font-size:15px;
+                font-weight: bold;
+                margin-bottom:15px;
+            }
+            .col-md-12.ad1{
+                margin-bottom:5px;
+                margin-top:5px;
+                padding:0;
+            }
+            .row.psad{
+                margin:0;
+            }
+            .img-responsive{
+                max-width: 100%;
+                height: auto;
+            }
+            .img_contents{
+                padding:0 10px 0 0;
+                margin:0;
+            }
+            .copy_leftmenu_bg{
+                border:1px solid#e4e3e8;
+                padding:0;
+            }
+            .copy_leftmenu_ps4{
+                margin:10px;
+                padding-top:4px;
+                padding-bottom:5px;
+                border-bottom:2px solid#454545;
+                font-size:18px;
+                text-align:center;
+                font-weight:700;
+            }
+            .copy_leftmenu_title{
+                font-size:13.5px;
+                white-space:nowrap;
+                padding:5px;
+                margin:0;
+                letter-spacing:-2px;
+                font-weight:700;
+                text-align:left;
+            }
+            .copy_leftmenu_mini{
+                font-size:11px;
+                padding: 5px 2px 5px 5px;
+                margin:0;
+                text-overflow:ellipsis;
+                overflow:hidden;
+
+            }
+            .copy_leftmenu{
+                padding:0;
+                margin:0;
+                font-size:12px;
+                line-height:16px;
+                text-align:left;
+                white-space:nowrap;
+            }
+            .copy_leftmenu_listbox{
+                padding:5px 0;
+                margin:0;
+                border-bottom:1px solid#ddd;
+                width:93px;
+            }
+            .copy_leftmenu_line{
+                border-bottom:1px solid#ddd;
+                margin:10px 0;
+            }
+            .copy_upsideleft{
+                padding:15px 15px 0 15px;
+            }
+            .copy_contents_header{
+                margin:0 0 5px 0;
+                padding:0;
+            }
+            .copy_contents_title{
+                margin:0;
+                padding:0;
+                font-size:15px;
+                font-weight:400;
+            }
+            .copy_contents_subtitle{
+                margin:10px 0 5px 0;
+                font-size:12px;
+                font-weight:700;
+            }
+            .copy_contents_news{
+                padding:0 15px 0 0;
+                margin:0;
+            }
+            .copy_contents{
+                padding:
+            }
+            .copy_contents_text{
+                font-size:12px;
+                color:#777;
+            }
+            .copy_newsent{
+                padding:0 30px 0 5px;
+            }
+            .copy_newstitle{
+                font-size:18px;
+                font-weight:700;
+                padding:0 15px 0 15px;
+            }
+            .copy_news{
+                font-size:12px;
+                font-weight:400;
+                padding:0 15px 0 15px;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+            }
+            .copy_list_issue{
+                margin:8px 0;
+                padding:0;
+            }
+            .copy_box{
+                border:1px solid#ddd;
+                background-color:#fff;
+                color:#000;
+                text-align:center;
+                font-size:9px;
+                padding:5px 8px;
+                outline:none;
+                font-weight:700;
+            }
+            .copy_box:hover{
+                border:1px solid#ddd;
+                background-color:#1a70dc;
+                color:#fff;
+                outline:none;
+                text-decoration:none;
+            }
+            .copy_button{
+                margin:0;
+                padding:0;
+            }
+            .copy_best{
+                list-style:disc;
+                font-size:12px;
+                line-height:18px;
+                padding:0;
+                margin:0 12px 12px 20px;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+            }
+            .copy_list_best{
+                margin:0;
+                padding:8px 0 8px 0;
+            }
+            .copy_issue{
+                font-size:12px;
+                line-height:18px;
+                padding:0;
+                margin:0;
+            }
+            .copy_gamesearch{
+                width:225px;
+                border:3px solid#1a70dc;
+                padding:5px 5px 5px 10px;
+                font-size:13px;
+            }
+            .copy_right{
+                padding:0;
+                margin:0;
+                
+            }
+            .copy_rightimg{
+                margin:0 0 15px 0;
+                padding:2px;
+                display:inline-block;
+            }
+            .copy_righttitle{
+                border-bottom:1px solid#ddd;
+                color:#1a70dc;
+                font-size:15px;
+                font-weight:700;
+                line-height:24px;
+                padding:0 0 3px 0;
+                margin:0 0 15px 0;
+                display:inline-block;
+            }
+            .copy_rightlist{
+                padding:0;
+                margin:0;
+                
+            }
+            .copy_righttext{
+                font-size:12px;
+                padding:8px 0;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                margin:0;
+            }
+            .ad3{
+                margin:15px 0 0 0;
+            }
+            .copy_gamelist{
+                border:1px solid#ddd;
+                overflow:hidden;
+                margin:2px;
+            }
+            .copy_gameimg{
+                width:120px;
+                height:172px;
+                margin:0;
+                padding:0;
+            }
+            .copy_gametitle{
+                font-weight:700;
+                font-size:11px;
+                text-overflow:ellipsis;
+                text-align:left;
+                white-space: nowrap;
+                margin:0;
+                line-height:18px;
+            }
+            .copy_gameinfo{
+                font-size:11px;
+                text-overflow:ellipsis;
+                text-align:left;
+                white-space: nowrap;
+                margin:0;
+                line-height:18px;
+            }
+            .copy_gamerow{
+                padding:0;
+                margin:0;
+            }
+            .copy_box_grey{
+                background-color:#f8f8f8;
+                border:1px solid#ddd;
+                padding:15px 12px 15px 20px;
+            }
+            .copy_box_lightgrey{
+                background-color:#fcfcfc;
+                border:1px solid#ddd;
+                padding:15px 12px 15px 20px;
+            }
+            .copy_rank1{
+                position:absolute;
+                top:15px;
+                left:15px;
+                background-color:#5591d7;
+                color:#f3cd60;
+                display:block;
+                font-size:15px;
+                width:20px;
+                text-align:center;
+            }
+            .copy_gamebutton{
+                background-color:#fff;
+                border:1px solid#ccc;
+                margin:0 3px;
+                padding:6px 25px;
+                box-shadow:0 3px 10px -3px #aaa;
+            }
+            .copy_gamebutton:focus{
+                outline:none;
+            }
+        </style>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-4 col-xs-12 mini_area">
+                    <a href="https://mypi.ruliweb.com">마이피</a>
+                    <a href="https://market.ruliweb.com/">중고장터</a>
+                    <a class="mini_quick" href="#"><b>퀵 메뉴</b></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-4 logo">
+                    <a href="index.html">
+                        <img class="img-responsive" src="images/logo.jpg" title="logo">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12 search">
+                    <input type="text" class="search_input" autofocus>
+                    <button class="search_button"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </div>
+        </div>
+                <!--/메뉴-->
+            <hr style="margin:0 0 15px 0">
+            <div class="container">
+                <nav>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul type="none" style="padding:0">
+                                <a href="#"><li class="menu_highlight">BEST</li></a>
+                                <a href="#"><li class="menu_highlight">게임찾기</li></a>
+                                <a href="#"><li class="menu">PS4</li></a>
+                                <a href="#"><li class="menu">PSVita</li></a>
+                                <a href="#"><li class="menu">XBOX ONE</li></a>
+                                <a href="#"><li class="menu">SWITCH</li></a>
+                                <a href="#"><li class="menu">3DS</li></a>
+                                <a href="#"><li class="menu">PC</li></a>
+                                <a href="#"><li class="menu">모바일</li></a>
+                                <a href="#"><li class="menu">A/V</li></a>
+                                <a href="#"><li class="menu">스포츠/연예</li></a>
+                                <a href="#"><li class="menu">뉴스</li></a>
+                                <a href="#"><li class="menu">취미갤</li></a>
+                                <a href="#"><li class="menu">핫딜</li></a>
+                                <a href="#"><li class="menu">커뮤니티</li></a>
+                                <a href="#"><li class="menu">만화</li></a>
+                                <a href="#"><li class="menu">피규어</li></a>
+                                <a href="#"><li class="menu">프라모델</li></a>
+                                <a href="#"><li class="menu">애니/책</li></a>
+                                <a href="#"><li class="menu">AC/고전</li></a>
+                                <a href="#"><li class="menu">패밀리 사이트<span class="glyphicon glyphicon-menu-down" style="padding:0 0 0 5px"></span></li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <hr style="margin:15px 0 0 0">
+            <!--본문-->
+            <div class="container">
+                <!--상단 광고-->
+                <div class="row ad1">
+                    <div class="col-md-12 ad1">
+                        <a href="#">
+                            <img class="img-responsive" src="images/ad1.jpg" title="ad">
+                        </a>
+                    </div>
+                </div>
+                <!--맨왼쪽메뉴-->
+                <div class="col-md-1 copy_leftmenu_bg">
+                    <a href="#"><h3 class="copy_leftmenu_ps4">PS4</h3></a>
+                    <ul class="copy_leftmenu">
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title">정보게시판</h4>
+                            <ul class="copy_leftmenu">
+                                <li class="copy_leftmenu_mini"><a href="#">유저 정보</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">예판/핫딜 정보</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">게임 심의결과</a></li>
+                            </ul>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title"><a href="#">PS스토어</a></h4>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title">게임 게시판</h4>
+                            <ul class="copy_leftmenu">
+                                <li class="copy_leftmenu_mini"><a href="#">게임 이야기</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">잡담 게시판</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">질문 게시판</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">PSN 게시판</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">PSNow</a></li></a>
+                                <li class="copy_leftmenu_mini"><a href="#">네트웍 설정</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">소비자모임</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">인디게임 게시판</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">VR게임 게시판</a></li>
+                            </ul>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title">스샷/영상</h4>
+                            <ul class="copy_leftmenu">
+                                <li class="copy_leftmenu_mini"><a href="#">스크린샷</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">동영상</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">게임 방송</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">성인게임 스샷</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">성인게임 영상</a></li>
+                            </ul>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title">리뷰 게시판</h4>
+                            <ul class="copy_leftmenu">
+                                <li class="copy_leftmenu_mini"><a href="#">게임 소감/비평</a></li>
+                                <li class="copy_leftmenu_mini"><a href="#">게임 추천</a></li>
+                            </ul>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title"><a href="#">중고 장터</a></h4>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title"><a href="#">토론 게시판</a></h4>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title"><a href="#">+유머/괴담</a></h4>
+                        </li>
+                        <li class="copy_leftmenu_listbox">
+                            <h4 class="copy_leftmenu_title"><a href="#">+자료실</a></h4>
+                        </li>
+                    </ul>
+                    <img src="images_ps/ad2.jpg" class="img-responsive">
+                </div>
+                <!--본문-->
+                <div class="col-md-9">
+                    <div class="row copy_upsideleft">
+                        <!--상단좌측-->
+                        <div class="col-md-9">
+                        <div class="row">
+                            <div class="row copy_contents_header">
+                                <a href="#"><h3 class="copy_contents_title"><strong>PS4 뉴스</strong></h3></a>
+                            </div>
+                            <div class="row copy_contents_news">
+                                <div class="col-md-2 img_contents">
+                                    <a href="#"><img src="images_ps/ps4news.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-10 copy_newsent">
+                                    <div class="row copy_newstitle">
+                                        <a href="#">‘다크사이더스 3’ 한국어판 신규 컨텐츠 ‘공허의 수호자’</a>
+                                    </div>
+                                    <div class="row copy_news">
+                                        <a href="#">㈜에이치투 인터렉티브(이하 H2 INTERACTIVE, 대표 허준하)는 건파이어 게임스(Gunfire Gam</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <a href="#"><h4 class="copy_contents_subtitle">뉴스</h4></a>
+                                </div>
+                                <div class="row">
+                                    <ul class="copy_issue">
+                                        <li class="copy_list_issue"><a href="#">배틀그라운드, 에란겔 비주얼 업데이트 및 시즌 4 콘... </a></li>
+                                        <li class="copy_list_issue"><a href="#">‘보더랜드 3 – 해피 투게더’ 트레일러 영상 공개 [4]</a></li>
+                                        <li class="copy_list_issue"><a href="#">오버워치 ‘2019 하계 스포츠 대회’, 주간 챌린지 이벤... </a></li>
+                                        <li class="copy_list_issue"><a href="#">락스타 게임즈, ‘레드 데드 온라인’에서 말 관리 패키... </a></li>
+                                        <li class="copy_list_issue"><a href="#">HD로 돌아온 플랫포머 명작, 퍼펙트! 슈퍼 몽키 볼 </a></li>
+                                        <li class="copy_list_issue"><a href="#">말이 가장 닮았다? 넷플릭스 ‘더 위쳐’ 게롤트와 로취 </a></li>
+                                        <li class="copy_list_issue"><a href="#">LoveR 한국어판 특별 한정판 구성품 소개 및 기간한... </a></li>
+                                        <li class="copy_list_issue"><a href="#">코나미, 이풋볼 페스 2020, 명문 축구 클럽 ‘유벤투스 ... </a></li>
+                                        <li class="copy_list_issue"><a href="#">내년부터 연고 홈경기 진행, '오버워치 리그' 2020 운... </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <a href="#"><h4 class="copy_contents_subtitle">유저정보</h4></a>
+                                </div>
+                                <div class="row">
+                                    <ul class="copy_issue">
+                                        <li class="copy_list_issue"><a href="#">몬스터 헌터 월드 - 1300만장 기념 아이템 배포 </a></li>
+                                        <li class="copy_list_issue"><a href="#">새로운 PSVR 헤드셋 특허에 관한 기술 </a></li>
+                                        <li class="copy_list_issue"><a href="#">플레이스테이션/닌텐도/엑스박스 게임스컴 2019 참석 </a></li>
+                                        <li class="copy_list_issue"><a href="#">프로야구 스피리츠 2019 1.01 패치 정보 </a></li>
+                                        <li class="copy_list_issue"><a href="#">Pes 2020 호날두 호우 세레머니 비교들 </a></li>
+                                        <li class="copy_list_issue"><a href="#">네덜란드 리그 피파20,위닝20 지원</a></li>
+                                        <li class="copy_list_issue"><a href="#">피파20 루마니아 리그 지원 </a></li>
+                                        <li class="copy_list_issue"><a href="#">중국 대륙...플스4 NBA 2K19 번들 출시 </a></li>
+                                        <li class="copy_list_issue"><a href="#">블러드스테인드 ROTN 추가복장 DLC예정인 Cosmet... </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row copy_contents_header">
+                                <a href="#"><h3 class="copy_contents_title"><strong>읽을거리</strong></h3></a>
+                            </div>
+                            <div class="row copy_contents_news">
+                                <div class="col-md-2 img_contents">
+                                    <a href="#"><img src="images_ps/read1.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-2 copy_contents">
+                                    <div class="row">
+                                        <a href="#"><h4 class="copy_contents_subtitle">플래그 테일: 이...</h4></a>
+                                    </div>
+                                    <div class="row">
+                                        <a href="#" class="copy_contents_text">하나의 병이 1347년 이탈리아에서 ...</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 img_contents">
+                                    <a href="#"><img src="images_ps/read2.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-2 copy_contents">
+                                    <div class="row">
+                                        <a href="#"><h4 class="copy_contents_subtitle">팀 소닉 레이싱</h4></a>
+                                    </div>
+                                    <div class="row">
+                                        <a href="#" class="copy_contents_text">‘마리오 카트’의 대성공 이후 수많...</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 img_contents">
+                                    <a href="#"><img src="images_ps/read3.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-2 copy_contents">
+                                    <div class="row">
+                                        <a href="#"><h4 class="copy_contents_subtitle">E3 2019</h4></a>
+                                    </div>
+                                    <div class="row">
+                                        <a href="#" class="copy_contents_text">E3 2019가 6월 11일부터 13일까지...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row copy_contents_header">
+                                    <a href="#"><h3 class="copy_contents_title"><strong>PS4 게임 인기 순위</strong></h3></a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 copy_box_grey">
+                                        <span class="copy_rank1"><strong>1</strong></span>
+                                        <img src="https://img.ruliweb.com/gi/mt/17/09/19/15e9974df68_xqyuht.png" width="95px" height="70px">
+                                        <span>몬스터 헌터 월드</span>
+                                        <br>
+                                        <span>9.3 점(553명 참여)</span>
+                                        <span>MORPG</span>
+                                        <span>새글 79</span>
+                                    </div>
+                                    <div class="col-md-12 copy_box_lightgrey">2어쌔신 크리드: 오디세이</div>
+                                    <div class="col-md-12 copy_box_lightgrey">3프로야구 스피리츠 2019</div>
+                                    <div class="col-md-12 copy_box_lightgrey">4다크 소울 3</div>
+                                    <div class="col-md-12 copy_box_lightgrey">5월드 사커 위닝 일레븐 2019 새글 42</div>
+                                    <div class="col-md-12 copy_box_lightgrey">6더 디비전 2 새글 38</div>
+                                    <div class="col-md-12 copy_box_lightgrey">7테라 새글 30</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row copy_contents_header">
+                                    <h4 class="copy_contents_subtitle">BEST 게시글</h4>
+                                </div>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">조회순</button></a>
+                                    </div>
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">등록순</button></a>
+                                    </div>
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">추천순</button></a>
+                                    </div>
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">댓글순</button></a>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin:10px 0 10px 0">
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">게임</button></a>
+                                    </div>
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">애니/책</button></a>
+                                    </div>
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">갤러리</button></a>
+                                    </div>
+                                    <div class="col-md-3 copy_button">
+                                        <a href="#"><button class="copy_box btn-block">커뮤니티</button></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <ul class="copy_best">
+                                        <li class="copy_list_best"><a href="#">타워 깨줘 텔못타게, 매너겜하...</a></li>
+                                        <li class="copy_list_best"><a href="#">ㅋㅋㅋ괜히 혐사꾼 잡을라다 게...</a></li>
+                                        <li class="copy_list_best"><a href="#">이번건 강디렉터가 좀 망치는것...</a></li>
+                                        <li class="copy_list_best"><a href="#">몬스터 헌터 월드 이벤트 한정 ...</a></li>
+                                        <li class="copy_list_best"><a href="#">LPL 공식 트위터 근황</a></li>
+                                        <li class="copy_list_best"><a href="#">밴 상황 간단설명 + DPL 규정C...</a></li>
+                                        <li class="copy_list_best"><a href="#">클템 레전드.jpg</a></li>
+                                        <li class="copy_list_best"><a href="#">요즘 스타크래프트 근황.jpg</a></li>
+                                        <li class="copy_list_best"><a href="#">개인적으로 선수들 싫어하는 거...</a></li>
+                                        <li class="copy_list_best"><a href="#">7/11 PBE 업데이트</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        </div>
+                        <!--상단우측 광고,BEST-->
+                        <div class="col-md-3" style="padding:0">
+                        <div class="row psad">
+                            <img src="images_ps/ad1.jpg" class="img-responsive">
+                        </div>
+                        <div class="row copy_box_grey" style="margin:0; padding:12px 12px 0 12px;">
+                            <div class="row copy_contents_header">
+                                <a href="#"><h4 class="copy_contents_subtitle">BEST 뉴스</h4></a>
+                            </div>
+                            <div class="row" style="margin:0;">
+                                <div class="col-md-4 copy_button">
+                                    <button class="copy_box btn-block">조회순</button>
+                                </div>
+                                <div class="col-md-4 copy_button">
+                                    <button class="copy_box btn-block">등록순</button>
+                                </div>
+                                <div class="col-md-4 copy_button">
+                                    <button class="copy_box btn-block">댓글순</button>
+                                </div>
+                            </div>
+                            <div class="row" style="margin:10px 0 10px 0">
+                                <div class="col-md-4 copy_button">
+                                    <button class="copy_box btn-block">PC/온라인</button>
+                                </div>
+                                <div class="col-md-4 copy_button">
+                                    <button class="copy_box btn-block" style="padding:5px 4px;">비디오/콘솔</button>
+                                </div>
+                                <div class="col-md-4 copy_button">
+                                    <button class="copy_box btn-block">모바일</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <ul class="copy_best copy_view">
+                                    <li class="copy_list_best"><a href="#">넥슨의 AOS ‘어센던트 원’, 서비...</a></li>
+                                    <li class="copy_list_best"><a href="#">시진핑 희화화한 ‘환원’, 근시일내...</a></li>
+                                    <li class="copy_list_best"><a href="#">사이퍼즈, 올 여름 환영 능력 보...</a></li>
+                                    <li class="copy_list_best"><a href="#">‘던전앤파이터’ 배우 임원희, 정석...</a></li>
+                                    <li class="copy_list_best"><a href="#">사마 가문을 이끌 자 누구인가, ...</a></li>
+                                    <li class="copy_list_best"><a href="#">넥슨네트웍스, 2019년 하반기 신...</a></li>
+                                    <li class="copy_list_best"><a href="#">어쌔신 크리드부터 톰 클랜시까...</a></li>
+                                    <li class="copy_list_best"><a href="#">LoL 챔스 서머 1라운드 중간 점...</a></li>
+                                    <li class="copy_list_best"><a href="#">드래곤 네스트, 신규 외전 캐릭터...</a></li>
+                                    <li class="copy_list_best"><a href="#">검은사막, ‘테르미안 워터파크’ 여...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--게임공략타이틀-->
+                    <div class="row copy_upsideleft">
+                        <div class="row" style="margin:0;">
+                            <h3 class="copy_contents_title">게임 공략 타이틀</h3>
+                            <input type="text" class="copy_gamesearch" placeholder="게임 검색" style="outline:none">
+                            <button type="button" class="copy_gamebutton" width="70px">검색</button>
+                            <button type="button" class="copy_gamebutton" width="140px">게임게시판 개설 신청</button>
+                        </div>
+                        <div class="row" style="margin:0;">
+                                <ul class="copy_gamerow">
+                                    <li style="margin:0">
+                                        <div class="copy_gamelist">
+                                            <a href="#">
+                                                <div class="row" style="margin:0">
+                                                    <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                </div>
+                                                <div class="row" style="margin:0">
+                                                    <div class="row" style="margin:0">
+                                                        <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                        <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                        <p class="copy_gameinfo">장르:FPS</p>
+                                                        <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                    </div>
+                                                    <div class="row">
+        
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li style="margin:0">
+                                            <div class="copy_gamelist">
+                                                <a href="#">
+                                                    <div class="row" style="margin:0">
+                                                        <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                    </div>
+                                                    <div class="row" style="margin:0">
+                                                        <div class="row" style="margin:0">
+                                                            <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                            <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                            <p class="copy_gameinfo">장르:FPS</p>
+                                                            <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                        </div>
+                                                        <div class="row">
+            
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li style="margin:0">
+                                                <div class="copy_gamelist">
+                                                    <a href="#">
+                                                        <div class="row" style="margin:0">
+                                                            <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                        </div>
+                                                        <div class="row" style="margin:0">
+                                                            <div class="row" style="margin:0">
+                                                                <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                                <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                                <p class="copy_gameinfo">장르:FPS</p>
+                                                                <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                            </div>
+                                                            <div class="row">
+                
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li style="margin:0">
+                                                    <div class="copy_gamelist">
+                                                        <a href="#">
+                                                            <div class="row" style="margin:0">
+                                                                <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                            </div>
+                                                            <div class="row" style="margin:0">
+                                                                <div class="row" style="margin:0">
+                                                                    <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                                    <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                                    <p class="copy_gameinfo">장르:FPS</p>
+                                                                    <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                                </div>
+                                                                <div class="row">
+                    
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li style="margin:0">
+                                                        <div class="copy_gamelist">
+                                                            <a href="#">
+                                                                <div class="row" style="margin:0">
+                                                                    <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                                </div>
+                                                                <div class="row" style="margin:0">
+                                                                    <div class="row" style="margin:0">
+                                                                        <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                                        <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                                        <p class="copy_gameinfo">장르:FPS</p>
+                                                                        <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                                    </div>
+                                                                    <div class="row">
+                        
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li style="margin:0">
+                                                            <div class="copy_gamelist">
+                                                                <a href="#">
+                                                                    <div class="row" style="margin:0">
+                                                                        <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                                    </div>
+                                                                    <div class="row" style="margin:0">
+                                                                        <div class="row" style="margin:0">
+                                                                            <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                                            <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                                            <p class="copy_gameinfo">장르:FPS</p>
+                                                                            <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                                        </div>
+                                                                        <div class="row">
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li style="margin:0">
+                                                                <div class="copy_gamelist">
+                                                                    <a href="#">
+                                                                        <div class="row" style="margin:0">
+                                                                            <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                                        </div>
+                                                                        <div class="row" style="margin:0">
+                                                                            <div class="row" style="margin:0">
+                                                                                <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                                                <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                                                <p class="copy_gameinfo">장르:FPS</p>
+                                                                                <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                                            </div>
+                                                                            <div class="row">
+                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li style="margin:0">
+                                                                    <div class="copy_gamelist">
+                                                                        <a href="#">
+                                                                            <div class="row" style="margin:0">
+                                                                                <img src="https://img.ruliweb.com/gi/pf/19/07/01/16bab5ce6fa_beohul.jpg" class="img-responsive copy_gameimg">
+                                                                            </div>
+                                                                            <div class="row" style="margin:0">
+                                                                                <div class="row" style="margin:0">
+                                                                                    <h3 class="copy_gametitle">울펜슈타인: 영 블러드</h3>
+                                                                                    <p class="copy_gameinfo">평점:0 | 새글:1</p>
+                                                                                    <p class="copy_gameinfo">장르:FPS</p>
+                                                                                    <p class="copy_gameinfo">일정:2019.07.26</p>
+                                                                                </div>
+                                                                                <div class="row">
+                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+        
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--맨오른쪽 베스트-->
+                <div class="col-md-2 copy_right">
+                    <div class="row" style="margin:0; border:none;">
+                        <div class="col-md-4 copy_rightimg">
+                            <img src="images_ps/right1.png" class="img-responsive">
+                        </div>
+                        <div class="col-md-4 copy_rightimg">
+                            <img src="images_ps/right2.jpg" class="img-responsive">
+                        </div>
+                        <div class="col-md-4 copy_rightimg">
+                            <img src="images_ps/right3.png" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="row copy_righttitle" style="border:none; margin:0;">
+                        <a href="#" class="copy_righttitle">오른쪽 베스트</a>
+                    </div>
+                    <div class="row copy_rightlist">
+                        <ul class="copy_rightlist">
+                            <li class="col-md-12 copy_righttext"><a href="#"><b>터키 에페소 & 이스탄불</b></a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">마늘쫑 볶음면</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">야간알바의 음식</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#"><b>1/6 노인 헤드</b></a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">요즘 소고기 먹을 일이 많네요</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">오랜만에 참치두부전을 만들었습니다</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#"><b>전복밥과 전복김밥</b></a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">시간 여행 캠핑</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">여자친구가 만들어준 떡볶이</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#"><b>목욕 전쟁은 이젠 안녕</b></a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">신당동 올댓피자</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">성남 중식뷔페 도원</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#"><b>Mg 마라샹궈</b></a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">pg 밴시 노른</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">메가미 SOL 랩터+킬러 스웨터</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#"><b>낡은 염원이 시대를 넘어</b></a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">가장 어두운 빛깔</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">헛쯔모 없는 체스</a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#"><b>조별 과제 잔혹사</b></a></li>
+                            <li class="col-md-12 copy_righttext"><a href="#">인터넷 가입</a></li>
+                        </ul>
+                    </div>
+                    <div class="row ad3">
+                        <a href="#"><img src="images_ps/ad3.png" class="img-responsive"></a>
+                    </div>
+                    
+                </div>
+            </div>
+    </html>
+</doctype>

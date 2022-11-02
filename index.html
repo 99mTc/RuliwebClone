@@ -1,0 +1,1071 @@
+<doctype html>
+    <html lang="ko">
+        <head>
+            <title>RULIWEB</title>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- 합쳐지고 최소화된 최신 CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+            <!--Noto Sans KR-->
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+        </head>
+
+            <body>
+            <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+            <style>
+            .ol,ul{
+                list-style:none;
+            }
+            .login_button{
+                background-color:#1a70dc;
+                color:white;
+                border:0;
+                border-radius:0;
+                padding:15px 0 15px 0;
+            }
+            .login_button:focus{
+                outline:none;
+            }
+            .search{
+                margin-top:30px;
+            }
+            .search_button{
+                background-color:#1a70dc;
+                color:white;
+                border:3px solid#1a70dc;
+                border-radius:0;
+                padding:6px 10px 10px 7px;
+                margin-left:-5px;
+            }
+            .search_input{
+                width:225px;
+                border:3px solid#1a70dc;
+                padding:5px 5px 5px 10px;
+            }
+            .search_button{
+                outline:none;
+            }
+            .search_input:focus{
+                outline:none;
+            }
+            .col-md-3.logo{
+                margin:20px 0 50px 0;
+            }
+            .jumbotron{
+                background-image:url('images/key.jpg');
+                background-size:cover;
+                color:white;
+                border-radius:0;
+                margin-bottom:5px;
+            }
+            .jumbotron h1{
+                font-family:'Noto Sans KR',sans-serif;
+                font-size:28px;
+                font-weight:bolder;
+                line-height:160%;
+            }
+            .jumbotron p{
+                font-size:12px;
+                line-height:22px;
+            }
+            a{
+                color:#000;
+            }
+            .jumbo_mini.col-md-2{
+                padding:0 5px 0 5px;
+            }
+            .jumbo_mini:hover{
+                border:5px solid#1a70dc;
+            }
+            a:hover#menu_right{
+                color:#1a70dc;
+            }
+            .menu{
+                font-size:14px;
+                list-style:none;
+                margin:0;
+                padding:0 4px 0 4px;
+            }
+            .menu_highlight{
+                color:#1a70dc;
+                font-weight:bold;
+                padding:0 4px 0 4px;
+                margin:0;
+            }
+            img{
+                padding:0 0 0 0;
+            }
+            li{
+                margin: 0 0 0 5;
+                padding: 0 0 0 0;
+                border: 0;
+                float: left;
+            }
+            .mini_quick{
+                color:#1a70dc;
+                font-weight:bold;
+            }
+            .mini_area.col-md-12{
+                text-align:right;
+                margin-top:10px;
+            }
+            .title{
+                font-size:15px;
+                font-weight: bold;
+                margin-bottom:15px;
+            }
+            .title_lol{
+                font-size:15px;
+                font-weight:bold;
+                color:#c0924a;
+            }
+            .title_heroes{
+                font-size:15px;
+                font-weight:bold;
+                color:#2089b4;
+            }
+            .title_wow{
+                font-size:15px;
+                font-weight:bold;
+                color:#696f88;
+            }
+            .title_contents{
+                font-size:12px;
+                font-weight:bold;
+                line-height:18px;
+            }
+            .title_overwatch{
+                font-size:15px;
+                font-weight: bold;
+                color:#e5ad35;
+            }
+            .family_title{
+                font-size:15px;
+                font-weight: bold;
+                color:#1a70dc;
+                margin-bottom:15px;
+            }
+            .family_site.col-md-4{
+                padding:0 3px 0 3px;
+                text-align:center;
+                font-size:12px;
+                margin:0 0 12px 0;
+                line-height:24px;
+            }
+            .list_issue.col-md-12{
+                list-style:none;
+                font-size:12px;
+                line-height:28px;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                padding:0;
+            }
+            ul#list_right{
+                list-style:disc;
+                padding:0 0 0 15px;
+                font-size:10px;
+                line-height:18px;
+                width:auto;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                margin:0 15px 0 15px;
+            }
+            ol#rank_right{
+                font-size:10px;
+                line-height:18px;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                padding:0 0 0 15px;
+                margin:0 0 0 15px;
+            }
+            .list_right.col-md-12{
+                padding:3px 0 3px 0;
+                margin:0;
+            }
+            .rank_right.col-md-12{
+                padding:3px 0 3px 0;
+                margin:0;
+            }
+            .title_right{
+                font-size:12px;
+                font-weight:bolder;
+                padding:0;
+                margin:0 0 10px 0;
+            }
+            .col-md-12.ad1{
+                margin-bottom:5px;
+                margin-top:5px;
+                padding:0;
+            }
+            .row.ad1{
+                margin:0;
+            }
+            .img-responsive{
+                max-width: 100%;
+                height: auto;
+            }
+            .contents.img-responsive{
+                margin-bottom:10px;
+            }
+            .row.contents{
+                margin:0 0 15px 0;
+            }
+            .contents .col-md-6{
+                padding:0 5px 0 5px;
+            }
+            .contents .col-md-3{
+                padding:0 5px 0 5px;
+            }
+            .login.col-md-12{
+                text-align:center;
+                font-size:10px;
+                margin-top:10px;
+            }
+            .left.col-md-9{
+                padding-left:0;
+            }
+            .row.box{
+                background-color:#fafafa;
+                border:1px solid #dcdcdc;
+                font-size:12px;
+                margin-bottom:5px;
+                padding: 20px 20px 20px 20px;
+                }
+            .col-md-6.box{
+                background-color:#fafafa;
+                border:1px solid #dcdcdc;
+                font-size:12px;
+                margin:5px 0 5px 0;
+                padding: 20px 20px 20px 20px;
+                }
+            .col-md-2.box{
+                background-color:#fafafa;
+                border:1px solid #dcdcdc;
+                font-size:12px;
+                margin-bottom:5px;
+                padding: 10px 0 10px 0;
+                text-align:center;
+            }
+            .menu_right.col-md-3{
+                font-weight:bold;
+                text-align:center;
+                font-size:10px;
+                padding:10px 5px 15px 5px;
+            }
+            .col-md-6#tab_right{
+                padding:0;
+            }
+            .col-md-3#tab_right{
+                padding:0 5px 0 5px;
+            }
+            .footer_background{
+                height:220px;
+                background-color:#fafafa;
+                margin-top:80px;
+                padding-top:40px;
+            }
+            .footer_title{
+                font-size:12px;
+                font-weight:bold;
+                margin:0 5px 0 0;
+                max-width:100px;
+            }
+            .footer_links.row{
+                list-style:none;
+                font-size:12px;
+                margin:0 5px 0 0;
+            }
+            .col-md-12.footer_links{
+                padding:0;
+            }
+            .copyright.row{
+                margin:110px 0 0 0;
+                font-size:12px;
+                color:#434343;
+            }
+            </style>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-4 col-xs-12 mini_area">
+                        <a href="https://mypi.ruliweb.com">마이피</a>
+                        <a href="https://market.ruliweb.com/">중고장터</a>
+                        <a class="mini_quick" href="#"><b>퀵 메뉴</b></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-4 logo">
+                        <a href="index.html">
+                            <img class="img-responsive" src="images/logo.jpg" title="logo">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12 search">
+                        <input type="text" class="search_input" autofocus>
+                        <button class="search_button"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </div>
+                <!--/메뉴-->
+            <hr style="margin:0 0 15px 0">
+            <div class="container">
+                <nav>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul type="none" style="padding:0">
+                                <a href="#"><li class="menu_highlight">BEST</li></a>
+                                <a href="#"><li class="menu_highlight">게임찾기</li></a>
+                                <a href="ps.html"><li class="menu">PS4</li></a>
+                                <a href="#"><li class="menu">PSVita</li></a>
+                                <a href="#"><li class="menu">XBOX ONE</li></a>
+                                <a href="#"><li class="menu">SWITCH</li></a>
+                                <a href="#"><li class="menu">3DS</li></a>
+                                <a href="#"><li class="menu">PC</li></a>
+                                <a href="#"><li class="menu">모바일</li></a>
+                                <a href="#"><li class="menu">A/V</li></a>
+                                <a href="#"><li class="menu">스포츠/연예</li></a>
+                                <a href="#"><li class="menu">뉴스</li></a>
+                                <a href="#"><li class="menu">취미갤</li></a>
+                                <a href="#"><li class="menu">핫딜</li></a>
+                                <a href="#"><li class="menu">커뮤니티</li></a>
+                                <a href="#"><li class="menu">만화</li></a>
+                                <a href="#"><li class="menu">피규어</li></a>
+                                <a href="#"><li class="menu">프라모델</li></a>
+                                <a href="#"><li class="menu">애니/책</li></a>
+                                <a href="#"><li class="menu">AC/고전</li></a>
+                                <a href="#"><li class="menu">패밀리 사이트<span class="glyphicon glyphicon-menu-down" style="padding:0 0 0 5px"></span></li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <hr style="margin:15px 0 0 0">
+            <!--본문-->
+            <div class="container">
+                <!--상단 광고-->
+                <div class="row ad1">
+                    <div class="col-md-12 ad1">
+                        <a href="#">
+                            <img class="img-responsive" src="images/ad1.jpg" title="ad">
+                        </a>
+                    </div>
+                </div>
+                <!--좌측 본문-->
+                <div class="col-md-9 left">
+                <!--키비주얼 점보트론-->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12"><a href="#" style="text-decoration:none">
+                            <div class="jumbotron" style="padding:40px 50px 40px 50px">
+                                <h1>‘반지의 제왕’ IP신작 MMORPG 제작중</h1>
+                                <p class="jumbo_text">개발 중인 새로운 ‘반지의 제왕’ 프랜차이즈
+                                    <br>게임에 대한 정보가 더 공개됐다. 
+                                    <br>현재 아마존 게임 스튜디오의 주도 하에 레유 테크놀로지, 
+                                    <br>애슬론 게임즈와 함께 MMORPG 로 개발중이다.</p>
+                            </div></a>
+                        <div class="row" style="margin:0 -5px 0 -5px">
+                            <div class="col-md-2 col-sm-4 col-xs-4 jumbo_mini"><a href="#"><img class="img-responsive" src="images/key_sub_01.jpg" title="‘반지의 제왕’ MMORPG"></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 jumbo_mini"><a href="#"><img class="img-responsive" src="images/key_sub_02.jpg" title="쉔무 III, 키오스크 영상"></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 jumbo_mini"><a href="#"><img class="img-responsive" src="images/key_sub_03.jpg" title="스위치 패미컴, 되감기"></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 jumbo_mini"><a href="#"><img class="img-responsive" src="images/key_sub_04.jpg" title="마블 UA3, 신세대 히어로"></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 jumbo_mini"><a href="#"><img class="img-responsive" src="images/key_sub_05.jpg" title="PSR, 신규 요소와 스팟"></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 jumbo_mini"><a href="#"><img class="img-responsive" src="images/key_sub_06.jpg" title="테라 클래식, 캐릭터 4종"></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--게임뉴스-->
+                    <div class="col-md-8"><h1 class="title">게임뉴스</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">한국닌텐도, 닌텐도 스위치 라이트 9월 20일</a></li>
+                                    <li><a href="#">포켓몬스터 소드·실드 디자인 스위치 라이트</a></li>
+                                    <li><a href="#">‘닌자 세이비어: RoW’ 한국어판, 예약 판매</a></li>
+                                    <li><a href="#">콜 오브 듀티: 블랙 옵스 4, 작전 아포칼립스 Z</a></li>
+                                    <li><a href="#">사무라이 쇼다운, 발매 기념 글로벌 캠페인</a></li>
+                                    <li><a href="#">HORI, PS4 무선 레이싱휠 에이펙스 사전 주문</a></li>
+                                    <li><a href="#">컵헤드, 넷플릭스에서 애니메이션으로 제작</a></li>
+                                    <li><a href="#">레드 데드 온라인, 탐험가 관리 패키지 제공</a></li>
+                                    <li><a href="#">2K, 가디언콘에서 ‘보더랜드 3’ 신규 기능</a></li>
+                                    <li><a href="#">유비소프트, 아이키네마와 라이센스 계약</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">같지만 또 다른 테라, ‘테라 클래식’ 캐릭터 4종</a></li>
+                                    <li><a href="#">던전앤파이터, 임원희·정석용 등장 신규 광고</a></li>
+                                    <li><a href="#">드래곤 네스트, 신규 외전 캐릭터 베나플라가</a></li>
+                                    <li><a href="#">하스스톤, ‘불꽃축제 - 잔.악.무.도.’ 시작</a></li>
+                                    <li><a href="#">검은사막 모바일, 신규 클래스 ‘란’ 출시</a></li>
+                                    <li><a href="#">신령의숲, 출시 기념 팬아트 및 프로필 공모전</a></li>
+                                    <li><a href="#">라인게임즈, ‘차이나조이 2019’ B2B 참가</a></li>
+                                    <li><a href="#">삼국대난투, 신규 콘텐츠 ‘미오의 탑’ 오픈</a></li>
+                                    <li><a href="#">일곱 개의 대죄, 6.5지역 챕터 성전의 전조</a></li>
+                                    <li><a href="#">카운터사이드, 프리미엄 테스트 사전 예약</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--게임스토리-->
+                    <div class="col-md-4" style="padding:0 10px 0 0"><h1 class="title">게임스토리</h1>
+                        <div class="row contents">
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/story_01.jpg">[리뷰] 팀 소닉 레이싱, 조별 과제 잔혹사</a></div>
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/story_02.jpg">[특집] [MULTI] 사진으로 보는 E3 2019 이모저모</a></div>
+                        </div>
+                        <div class="row contents">
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/story_03.jpg">[스토리] ‘젤다의 전설’ 스토리 총정리 2부</a></div>
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/story_04.jpg">[스토리] ‘다크소울’ 시리즈 스토리 총정리 1부</a></div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8">
+                    <div class="col-md-6" style="padding:0;"><h1 class="title">읽을거리</h1>
+                        <div class="row contents">
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/reader_01.jpg">[리뷰] 팀 소닉 레이싱, 조별 과제 잔혹사</a></div>
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/reader_02.jpg">[특집] [MULTI] 사진으로 보는 E3 2019 이모저모</a></div>
+                        </div>
+                        <div class="row contents">                                
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/reader_03.jpg">[스토리] ‘젤다의 전설’ 스토리 총정리 2부</a></div>
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/reader_04.jpg">[스토리] ‘다크소울’ 시리즈 스토리 총정리 1부</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding:0;"><h1 class="title">동영상</h1>
+                        <div class="row contents">
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/movie_01.jpg">[리뷰] 팀 소닉 레이싱, 조별 과제 잔혹사</a></div>
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/movie_02.jpg">[특집] [MULTI] 사진으로 보는 E3 2019 이모저모</a></div>
+                        </div>
+                        <div class="row contents">
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/movie_03.jpg">[스토리] ‘젤다의 전설’ 스토리 총정리 2부</a></div>
+                            <div class="col-md-6"><a class=" title_contents" href="#"><img class="img-responsive contents" src="images/movie_04.jpg">[스토리] ‘다크소울’ 시리즈 스토리 총정리 1부</a></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12"><h1 class="title">콘솔 유저정보</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="col-md-12 list_issue">
+                                    <li><a class="list_issue" href="#">백지장도 맞들면 낫다 - 울펜슈타인: 영블러드에</a></li>
+                                    <li><a class="list_issue" href="#">요괴워치 4 휴대모드/TV모드 프레임레이트 분석</a></li>
+                                    <li><a class="list_issue" href="#">요괴워치 1 스위치 발매 예정</a></li>
+                                    <li><a class="list_issue" href="#">이상한 환상향 로터스 라비린스 최신 PV</a></li>
+                                    <li><a class="list_issue" href="#">세계적인 격투 게임 플레이어 이선우 씨를 만나</a></li>
+                                    <li><a class="list_issue" href="#">사이버펑크 2077도, 어린이 NPC 공격은 불가능</a></li>
+                                    <li><a class="list_issue" href="#">Neo Geo World Tour Season 2 Global Final 결</a></li>
+                                    <li><a class="list_issue" href="#">레드 데드 온라인, 탐험가 관리 패키지 제공</a></li>
+                                    <li><a class="list_issue" href="#">[더 닌자 워리어스 원스 어게인] 2차 동영상 공</a></li>
+                                    <li><a class="list_issue" href="#">라이자의 아틀리에 프로듀서가 라이자의 허벅지에</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                 <ul class="col-md-12 list_issue">
+                                    <li><a class="list_issue" href="#">금주 (7월 15~19일) Xbox One 출시예정 게임</a></li>
+                                    <li><a class="list_issue" href="#">스트리트파이터 제로3 전국대회 ULTIMATE ZE</a></li>
+                                    <li><a class="list_issue" href="#">기어박스는 다음 주 동안 함께 '축하의 축하'일</a></li>
+                                    <li><a class="list_issue" href="#">소니, 환불수수료 1천원 떼다 500배 벌금에 자진</a></li>
+                                    <li><a class="list_issue" href="#">프로야구 스피리츠 2019 - 특징 6</a></li>
+                                    <li><a class="list_issue" href="#">프로야구 스피리츠 2019 실제 선수와 게임 비교</a></li>
+                                    <li><a class="list_issue" href="#">파이널 판타지 14 메타크리틱 점수</a></li>
+                                    <li><a class="list_issue" href="#">주식회사 포켓몬, 후쿠시마 복숭아 축제 응원 캠</a></li>
+                                    <li><a class="list_issue" href="#">7/13 국내 격투게임 대회 결과</a></li>
+                                    <li><a class="list_issue" href="#">[스페이스 인베이더] 실사화 제작</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="col-md-4" style="padding:0 15px 0 5px;"><img src="images/ad2.jpg" title="ad" class="img-responsive"></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6"><h1 class="title">게임 예판 핫딜</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li><a class="list_issue" href="#">[조이트론쇼핑몰]네오지오미니 (79,000/무배)</a></li>
+                                    <li><a class="list_issue" href="#">[E-Shop] 스위치 썸머 세일</a></li>
+                                    <li><a class="list_issue" href="#">[옥션] GAINWARD GTX1070 D5 8GB / 310원</a></li>
+                                    <li><a class="list_issue" href="#">[다이렉트게임즈] 주말 프로모션 / 다크사이더</a></li>
+                                    <li><a class="list_issue" href="#">[험블번들] 여름할인 + 먼슬리구독자 추가할인</a></li>
+                                    <li><a class="list_issue" href="#">[스팀] Age of Wonders III 무료배포</a></li>
+                                    <li><a class="list_issue" href="#">닌텐도 스위치 Lite 포켓몬 에디션/21,978엔(세</a></li>
+                                    <li><a class="list_issue" href="#">[11번가]몬스터헌터 월드 아이스본 2차 한정판 7</a></li>
+                                    <li><a class="list_issue" href="#">[스팀] 옥토패스 트래블러 30% 45,360₩</a></li>                                            
+                                    <li><a class="list_issue" href="#">[게임] 스팀 스톰웍스 빌드 앤 레스큐 한국어 버전 출시</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6"><h1 class="title">생활용품 예판 핫딜</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li><a class="list_issue" href="#">[11번가]갤럭시M20 자급제 198000원 무료배송</a></li>
+                                    <li><a class="list_issue" href="#">[요기요] 버거&피자/양식 4000원 할인 (7/15~7/</a></li>
+                                    <li><a class="list_issue" href="#">[버거킹] 와퍼 3500원 (7/15~7/21)+통모짜 와퍼</a></li>
+                                    <li><a class="list_issue" href="#">[11번가] 휴스톰 무선 물걸레청소기 HS-10000 /</a></li>
+                                    <li><a class="list_issue" href="#">[타오투코리아]샤오미 홍미7A 글로벌 (109000원</a></li>
+                                    <li><a class="list_issue" href="#">네이버쇼핑)네스프레소 호환캡슐/50캡슐 22000</a></li>
+                                    <li><a class="list_issue" href="#">다이소 강아지 우천대비 우비 9210원 무료배송</a></li>
+                                    <li><a class="list_issue" href="#">[G9] 샤오미 dreame V9 무선 청소기 166,250원</a></li>
+                                    <li><a class="list_issue" href="#">[네이버] 회전 전기모기채 / 6,500원 / 2,500원</a></li>
+                                    <li><a class="list_issue" href="#">[게임] 어쌔신크리드 66% 할인 곧 종료</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1 class="title">PC</h1>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="col-md-12 list_issue">
+                                            <li><a class="list_issue" href="#">[하스스톤] Surrender (김정수) Grandmaster Seas</a></li>
+                                            <li><a class="list_issue" href="#">[정보] 사이버펑크 2077도, 어린이 NPC 공격은 불가</a></li>
+                                            <li><a class="list_issue" href="#">[오버워치] 밥 모둠회밥! 오버워치 밥 펀코팝 발매 예정</a></li>
+                                            <li><a class="list_issue" href="#">[정보] 링오브 엘리시움- 7월 12,13일 패치 내용</a></li>
+                                            <li><a class="list_issue" href="#">[LOL] [LOL] 조합 살린 아프리카, 그리핀에게 2연패</a></li>
+                                            <li><a class="list_issue" href="#">[정보] 배틀필드 시리즈 동시접속자</a></li>
+                                            <li><a class="list_issue" href="#">[정보] '이온 메이든', '이온 퓨리'로 개명하여 8월 15일</a></li>
+                                            <li><a class="list_issue" href="#">[오버워치] 2019 오버워치 리그 스테이지3 플레이오</a></li>
+                                            <li><a class="list_issue" href="#">[오버워치] 오버워치, 신규 핵 감지 시스템 적용...적발</a></li>
+                                            <li><a class="list_issue" href="#">[정보] 베요네타 한글 패치 V1.10입니다.</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                         <ul class="col-md-12 list_issue">
+                                            <li><a class="list_issue" href="#">[오버워치] 2019 오버워치 리그 스테이지3 플레이</a></li>
+                                            <li><a class="list_issue" href="#">[인디게임] [인디] Eagle Island</a></li>
+                                            <li><a class="list_issue" href="#">[S/W] 세일즈포스 "소비자 데이터로 '아마존 추천상품'</a></li>
+                                            <li><a class="list_issue" href="#">[e스포츠] [OWL]한계는 없다! 상하이, 밴쿠버 4:1로</a></li>
+                                            <li><a class="list_issue" href="#">[H/W] AMD의 RIS가 Nvidia의 DLSS보다 더 좋은가?</a></li>
+                                            <li><a class="list_issue" href="#">[정보] 기어박스는 다음 주 동안 함께 '축하의 축하'일</a></li>
+                                            <li><a class="list_issue" href="#">[H/W] 옵테인 메모리 M15 발표</a></li>
+                                            <li><a class="list_issue" href="#">[정보] 7월 14일 게임트릭스 피시방 점유율</a></li>
+                                            <li><a class="list_issue" href="#">[하스스톤] 신규 사제 특급 카드 공개</a></li>
+                                            <li><a class="list_issue" href="#">[정보] 니노쿠니2 한글화 정보</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12" style="margin-left:-2px"><h1 class="family_title">패밀리 사이트</h1>
+                        <div class="row" style="margin-right:0">
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_01.jpg">POE</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_02.jpg">LOL</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_03.jpg">WOW</a></div>
+                        </div>
+                        <div class="row" style="margin-right:0">
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_04.jpg">히오스</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_05.jpg">하스스톤</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_06.jpg">오버워치</a></div>
+                        </div>
+                        <div class="row" style="margin-right:0">
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_07.jpg">소울워커</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_08.jpg">검은사막</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_09.jpg">메이플</a></div>
+                        </div>
+                        <div class="row" style="margin-right:0">
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_10.jpg">몬헌월드</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_11.jpg">페그오</a></div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 family_site"><a class="list_issue" href="#"><img class="img-responsive" src="images/family_12.jpg">검사M</a></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!--우측 본문-->
+                <div class="col-md-3">
+                    <div class="row box">
+                        <button class="login_button btn-block"><b>RULIWEB 로그인</b></button>
+                        <div class="col-md-12 login"><a href="#">회원가입 | 루리웹 회원전환 | ID・PW 찾기</a></div>
+                    </div>
+                    <div class="row">
+                        <a href="#" id="menu_right"><div class="col-md-2 col-sm-2 col-xs-4 box"><span style="line-height:15px" class="glyphicon glyphicon-comment"><br>유머</span></div></a>
+                        <a href="#" id="menu_right"><div class="col-md-2 col-sm-2 col-xs-4 box"><span style="line-height:15px" class="glyphicon glyphicon-knight"><br>피규어</span></div></a>
+                        <a href="#" id="menu_right"><div class="col-md-2 col-sm-2 col-xs-4 box"><span style="line-height:15px" class="glyphicon glyphicon-film"><br>애니</span></div></a>
+                        <a href="#" id="menu_right"><div class="col-md-2 col-sm-2 col-xs-4 box"><span style="line-height:15px" class="glyphicon glyphicon-modal-window"><br>만화</span></div></a>
+                        <a href="#" id="menu_right"><div class="col-md-2 col-sm-2 col-xs-4 box"><span style="line-height:15px" class="glyphicon glyphicon-plane"><br>프라</span></div></a>
+                        <a href="#" id="menu_right"><div class="col-md-2 col-sm-2 col-xs-4 box"><span style="line-height:15px" class="glyphicon glyphicon-wrench"><br>고전</span></div></a>
+                    </div>
+                    <!--BEST 게시글-->
+                    <div class="row box">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <h3 class="title_right">BEST 게시글</h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="tab_right">
+                                <a href="#"><div class="col-md-3 col-sm-3 col-xs-3" id="tab_right">조회</div></a>
+                                <a href="#"><div class="col-md-3 col-sm-3 col-xs-3" id="tab_right">등록</div></a>
+                                <a href="#"><div class="col-md-3 col-sm-3 col-xs-3" id="tab_right">추천</div></a>
+                                <a href="#"><div class="col-md-3 col-sm-3 col-xs-3" id="tab_right">댓글</div></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">게임</div></a>
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">애니/책</div></a>
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">갤러리</div></a>
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">커뮤니티</div></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 list_right">
+                                <ul id="list_right">
+                                    <li class="col-md-12 list_right"><a href="#">[오늘부터 소재 존버하세요] 2</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">그리핀 트위터</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">신개념 쎈비 트롤러.jpg</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">"그 채소" 때문에 생긴 선의의</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">(버그제보) 어뷰징성 오렌지박</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">아이스본 버프바로 참전하는 만화</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">(2019.7.8.일부수정)[PS4 아시</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">Lpl이 혐오스러운 이유</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">와 페이커 이건 진짜 개멋있다</a></li>
+                                    <li class="col-md-12 list_right"><a href="#">블라섬이랑 알렉산드라한테 수</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--게시판 인기 순위-->
+                    <div class="row box">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="title_right">게시판 인기 순위</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">게임</div></a>
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">애니/책</div></a>
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">갤러리</div></a>
+                                <a href="#" id="menu_right"><div class="col-md-3 col-sm-3 col-xs-3 menu_right">커뮤니티</div></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 rank_right">
+                                <ol id="rank_right">
+                                    <li class="col-md-12 rank_right"><a href="#">[오늘부터 소재 존버하세요] 2차 국지전 이벤트</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">그리핀 트위터</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">신개념 쎈비 트롤러.jpg</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">"그 채소" 때문에 생긴 선의의</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">(버그제보) 어뷰징성 오렌지박</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">아이스본 버프바로 참전하는 만화</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">(2019.7.8.일부수정)[PS4 아시</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">Lpl이 혐오스러운 이유</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">와 페이커 이건 진짜 개멋있다</a></li>
+                                    <li class="col-md-12 rank_right"><a href="#">블라섬이랑 알렉산드라한테 수</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!--게임 심의 결과-->
+                    <div class="row box">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="title_right">게임 심의 결과</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 list_right">
+                                <ul id="list_right">
+                                    <li class="col-md-12 list_right">[오늘부터 소재 존버하세요] 2</li>
+                                    <li class="col-md-12 list_right">그리핀 트위터</li>
+                                    <li class="col-md-12 list_right">신개념 쎈비 트롤러.jpg</li>
+                                    <li class="col-md-12 list_right">"그 채소" 때문에 생긴 선의의</li>
+                                    <li class="col-md-12 list_right">(버그제보) 어뷰징성 오렌지박</li>
+                                    <li class="col-md-12 list_right">아이스본 버프바로 참전하는 만화</li>
+                                    <li class="col-md-12 list_right">(2019.7.8.일부수정)[PS4 아시</li>
+                                    <li class="col-md-12 list_right">Lpl이 혐오스러운 이유</li>
+                                    <li class="col-md-12 list_right">와 페이커 이건 진짜 개멋있다 </li>
+                                    <li class="col-md-12 list_right">블라섬이랑 알렉산드라한테 수</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--휴대폰 업체 가격정보 게시판-->
+                    <div class="row box">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="title_right">휴대폰 업체 가격정보 게시판</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 list_right">
+                                <ul id="list_right">
+                                    <li class="col-md-12 list_right">일산내방~! SK,KT,LG 5G V50 등등 가격좋습니당~</li>
+                                    <li class="col-md-12 list_right">[KT,LG 번이/기변,경남내방] 현재 5g 가격 좋습니다^^</li>
+                                    <li class="col-md-12 list_right">[KT,LG 번이/기변,경남내방] 현재 5g 가격 좋습니다^^</li>
+                                    <li class="col-md-12 list_right">서울/파주/일산 긴말하지않겠습니다. 가격제일좋습니다</li>
+                                    <li class="col-md-12 list_right">♥♥♥♥♥♥♥♥부산 내방 5g 초특가 노트9 기회요 싸게싸게</li>
+                                    <li class="col-md-12 list_right">날씨는 좋지않지만 번이&기변은 좋습니다 한번 보고가시죠!!!</li>
+                                    <li class="col-md-12 list_right">[skt/kt/u+] 부산 내방 주말특가 성지 갤10 5g/ 노트9 특가요</li>
+                                    <li class="col-md-12 list_right">신도림 굳이 갈필요 없으세요 S10 5G/ V50 대란</li>
+                                    <li class="col-md-12 list_right">수도권 [공짜특가][당일개통][현금완납] 핫하게</li>
+                                    <li class="col-md-12 list_right">[KT,LG 번이/기변,경남내방] 항시 가격 업데이트~</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--신설 게시판-->
+                    <div class="row box">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="title_right">신설 게시판</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 list_right">
+                                <ul id="list_right">
+                                    <li class="col-md-12 list_right">텝펜</li>
+                                    <li class="col-md-12 list_right">이더본 (Etherborn)</li>
+                                    <li class="col-md-12 list_right">푸른 날개의 슈발리에</li>
+                                    <li class="col-md-12 list_right">블레이징 크롬</li>
+                                    <li class="col-md-12 list_right">라플라스M</li>
+                                    <li class="col-md-12 list_right">타이니메탈 허구의 제국</li>
+                                    <li class="col-md-12 list_right">씨 오브 솔리튜드</li>
+                                    <li class="col-md-12 list_right">닌자 세이비어: 리턴 오브 워리어즈</li>
+                                    <li class="col-md-12 list_right">킬라킬 더 게임 -IF-</li>
+                                    <li class="col-md-12 list_right">2020 도쿄 올림픽 -The Official Video Game</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--공지사항-->
+                    <div class="row box">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="title_right">공지사항</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 list_right">
+                                <ul id="list_right">
+                                    <li class="col-md-12 list_right">'브라우저 알람' 서비스 관련</li>
+                                    <li class="col-md-12 list_right">루리웹 이용 가이드</li>
+                                    <li class="col-md-12 list_right">루리웹이 느린 것 같을 때</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--2:2 본문-->
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                    <hr>
+                        <div class="row">
+                            <div class="col-md-3"><h1 class="title_lol">LOL</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li>[잡담] 그 시절 세계를 놀라게 했던 LCK의 픽 | 어떤랭</li>
+                                    <li>[잡담] 아트 패치 요약.jpg</li>
+                                    <li>[정보] 07.17 ESPN 파워랭킹</li>
+                                    <li>[잡담] 근데 레넥톤 상향 왜시킨거지</li>
+                                    <li>[잡담] 이번주는 중위권 순위가 변동될 가능성이 아주</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3"><h1 class="title_heroes">히오스</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li>[잡담] 미잭형이 그린 소냐 갑옷 벗기기</li>
+                                    <li>[잡담] 겉바속촉한 한타 폭파</li>
+                                    <li>[잡담] 히오스가 옵치에 비해 확실히 어렵고 피곤한 게</li>
+                                    <li>[홍보] [대회 홍보]팬메이드 온라인 히오스 대회 HOTS</li>
+                                    <li>[잡담] 히오스 등급전 말로만 들었는데 정말 가관이네요</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3"><h1 class="title">SNS 봇 게시판</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li>[오버워치] 경기 시작하겠습니다! 오버워치 하계 스포츠 대</li>
+                                    <li>[lol] 3주만에 9.14패치가 진행되었습니다! 이번 패치</li>
+                                    <li>[플레이스테이션] Dauntless - Fortune & Glory update. | P</li>
+                                    <li>[플레이스테이션] Robbie Swifthand - Gameplay Trailer | PS4</li>
+                                    <li>[플레이스테이션] Paladins - Shore Patrol Battle Pass | PS4</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3"><h1 class="title">취미갤러리 BEST</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li>[패스트푸드] 한국 KFC에서 닭껍질을 튀기는 동안 미국 K</li>
+                                    <li>[기타] 코카콜라 / 환타 : 신제품 - 프로즌</li>
+                                    <li>[중식] 야식으로 노브랜드물만두에 고추기름 조합</li>
+                                    <li>[PS4] 인류의 여러분에게 - 폐허가 된 아키하바라</li>
+                                    <li>[기타] 요 몇달간 먹은 것들</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <hr>
+                        <div class="row">
+                    <div class="col-md-3"><h1 class="title_wow">WOW</h1>
+                        <ul class="col-md-12 list_issue">
+                            <li>[잡담] 미쳤습니까? Garona?</li>
+                            <li>[정보] 영예의 영원한 공격대원 업적 가이드.</li>
+                            <li>[잡담] 와우 복귀하려고했는데 예전 트라우마가 꿈에서</li>
+                            <li>[정보] 오늘자 핫픽스.</li>
+                            <li>[질문] 실바나스 눈가 주변에 있는거 뭔가요?</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3"><h1 class="title_overwatch">오버워치</h1>
+                        <ul class="col-md-12 list_issue">
+                            <li>[영상] 하계 스포츠 대회 2019 총리뷰 및 무료 스킨 획득</li>
+                            <li>[정보] 오버워치 패치 노트 – 2019년 7월 17일</li>
+                            <li>[잡담] 루슈 신나게 하는중</li>
+                            <li>[정보] 오버워치 2019 하계 스포츠 대회 이벤트 스킨 및</li>
+                            <li>[정보] :: 2020 오버워치 리그 시즌3 홈 경기 종합 정보</li>
+                        </ul class="list_issue">
+                    </div>
+                    <div class="col-md-3"><h1 class="title">데이블뉴스</h1>
+                        <ul class="col-md-12 list_issue">
+                            <li>[사회일반] "개미떼 나와도 환불 안 돼"…숙박·여행·항공 피</li>
+                            <li>[정치] 박지원 "정두언, MB에 잘못보여 함께 고초 겪은</li>
+                            <li>[사회] [날씨가 왜 이래]태풍 ‘다나스’ 장마전선 밀어올</li>
+                            <li>[사회] [경향포토]영등포 경찰서 들어가는 표창원 의원</li>
+                            <li>[정치] 당정 "택시산업 플랫폼서비스 허용··· 수익금 일</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3"><h1 class="title">유머 BEST</h1>
+                        <ul class="col-md-12 list_issue">
+                            <li>[유머] 남자가 구멍을 만든 이유.jpg</li>
+                            <li>[유머] 여론을 단숨에 뒤집어버리는 세글자.</li>
+                            <li>[유머] 대한 외국인 시즌 2.jpg</li>
+                            <li>[유머] 국정원 "일본 느그 북한에 밀항하는거 봐두</li>
+                            <li>[유머] 프린세스 커넥트 할때 가장 놀라는 부분.jpg</li>
+                        </ul>
+                    </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-12" style="padding:0">
+                        <div class="col-md-6 box"><h1 class="title">모바일</h1>
+                            <div class="col-md-6">
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">갤럭시 폴더 2 마이너 체인지 및 색상 추가</a></li>
+                                    <li><a href="#">삼성 갤럭시A40 SKT 출시 예정</a></li>
+                                    <li><a href="#">갤럭시A90 최신 렌더링 노출!</a></li>
+                                    <li><a href="#">애플, 아이폰 XR에 이어 XS도 보상판매 시작</a></li>
+                                    <li><a href="#">페이스북, 개인정보 유출로 '역대 최대' 5.9조 벌</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">[아이돌마스터 밀리시타] 2주년 이벤트 총결산</a></li>
+                                    <li><a href="#">밀리시타, 플래티넘 가샤 1일 1회 무료 캠페인 개</a></li>
+                                    <li><a href="#">[붕괴3 장편만화] 제2차 붕괴편 - 제7화 공간</a></li>
+                                    <li><a href="#">[에픽세븐] 간담회 각종 논란 제기</a></li>
+                                    <li><a href="#">[일본 뱅드림]「여름의 고동 캠페인!」 기념 로</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 box">
+                            <h1 class="title">종합게시판</h1>
+                            <div class="col-md-6">
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">[경제] 삼성, 3개 소재 긴급 물량 확보 ‘급한 불 껐지만</a></li>
+                                    <li><a href="#">[사회] 실수로 클릭했는데 194만원 결제···숙박업 소</a></li>
+                                    <li><a href="#">[정치] “정의당을 범여권으로 분류 말라, 민주당과 집</a></li>
+                                    <li><a href="#">[사회] 문 대통령, 트럼프·아베 면전서 “일본은 우리 동</a></li>
+                                    <li><a href="#">[정보] 전진-유빈-윤하, ★가수 3인방 '대한외국인' 도</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">[경제] 전국 GS25에서 '달러·위안화·유로·엔화'</a></li>
+                                    <li><a href="#">[정보] '캠핑클럽' 핑클, 14년만에 완전체…웃고 울</a></li>
+                                    <li><a href="#">[사회] 유승준 반감은 더 커졌는데..왜 돌아오려 애</a></li>
+                                    <li><a href="#">[사회] "한국인 행복감은 보통…2030여성, 주관적</a></li>
+                                    <li><a href="#">[정치] [사설]극일 위해 국민적 힘을 합쳐야 할 때</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                     <div class="col-md-6 box"><h1 class="title">취미</h1>
+                        <div class="col-md-6">
+                            <ul class="col-md-12 list_issue">
+                                <li><a href="#">[애니] 러브라이브! 선샤인!!×게이머즈 LINE 스티커</a></li>
+                                <li><a href="#">[애니] 「Tokyo 7th 시스터즈」5th 라이브 발표 정보</a></li>
+                                <li><a href="#">[애니] [애니맥스] 풀메탈패닉 극장판 14(일)23:57,</a></li>
+                                <li><a href="#">[프라모델] 코토부키야 「PSO2es」 제네(스텔라 이노</a></li>
+                                <li><a href="#">[피규어] [가면라이더 제로원] 변신벨트 DX 비전 제로</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="col-md-12 list_issue">
+                                <li><a href="#">[애니] [PSO2: 에피소드 오라클] 전25화로 10월</a></li>
+                                <li><a href="#">[프라모델] 코토부키야 프라모델 신제품 전시&시</a></li>
+                                <li><a href="#">[프라모델] RG 뉴건담 어깨 가동 변경점 외</a></li>
+                                <li><a href="#">[프라모델] 슈퍼 미니 프라 제네식 가오가이가 작례</a></li>
+                                <li><a href="#">[책] 나루토 : 사스케 열전 ~우치하의 후예와 천구의</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 box">
+                        <h1 class="title">많이 본 글/힛갤</h1>
+                        <div class="col-md-6">
+                            <ul class="col-md-12 list_issue">
+                                <li><a href="#">[유머] 젊은 사람들은 의외로 모르는 안전수칙</a></li>
+                                <li><a href="#">[유머] 투자대비 12000배 떡상해서 기네스에 오른</a></li>
+                                <li><a href="#">[유머] 세계 최강 래퍼 수준</a></li>
+                                <li><a href="#">[유머] 외국의 군대다녀온 서양녀 .JPG</a></li>
+                                <li><a href="#">[유머] 달빠들이 상식인물이냐 아니냐로 개판났던 인물.</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                            <ul class="col-md-12 list_issue">
+                                <li><a href="#">[유머] 탈룰라 면역.jpg</a></li>
+                                <li><a href="#">[유머] 뉴질랜드 입국 거부당한 여성</a></li>
+                                <li><a href="#">[유머] "그럼, 여기선 레이디 퍼스트로..".jpg</a></li>
+                                <li><a href="#">[유머] FATE) 오늘자 달빠들 충격먹은 장면</a></li>
+                                <li><a href="#">[유머] 4달러 아저씨 근황</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="row">
+                    <div class="col-md-6"><h1 class="title">단편만화</h1>
+                        <div class="row contents">
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_01.jpg">[단편] [러브라이브] 하루한번
+                                    럽라만화 '기지개'</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_02.jpg">[단편] 이세계에서 악마가 됨</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_03.jpg">[단편] 여고생 구미호 이미래</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_04.jpg">[연재] [랑그릿사] 랑그릿사 모바일
+                                하는 만화 4</a></div>
+                        </div>
+                        <div class="row contents">
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_05.jpg">[단편] [역개루 역사만화] 조선의 무법자</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_06.jpg">[소녀전선] [소녀전선] 늦게 터지는 타입</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_07.jpg">[소녀전선] [소녀전선] 사오의 소개</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_08.jpg">[단편] [드래곤볼] 움직이지
+                                못하는 사이어인</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6"><h1 class="title">연재만화</h1>
+                        <div class="row contents">
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_09.jpg">[단편] 수퍼맨</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_10.jpg">[연재] 몬스터헌터 아이스본
+                                예약하는 만화</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_11.jpg">[단편] 광팬이라면 이 굳즈를 살 수
+                                있다 vs 불가 만화</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_12.jpg">[단편] [소녀전선] 굴러온 돌이
+                                들박힌 돌 뺀다 ♥</a></div>
+                        </div>
+                        <div class="row contents">
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_13.jpg">[연재] 빅건맨 15</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_14.jpg">[단편] 어탐) 비모가 사진찍어주는 만화</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_15.jpg">[소녀전선] [소녀전선] 가난한 댕댕이와
+                                회전초밥</a></div>
+                            <div class="col-md-3"><a class="title_contents" href="#"><img class="img-responsive contents" src="images/manhwa_16.jpg">[단편] [프리코네] 에픽세븐 육개장
+                                먹는 페코린느 (유튜브)</a></div>
+                        </div>
+                    </div>
+                        </div>
+                    <hr>
+                        <div class="row">
+                            <div class="col-md-3"><h1 class="title">유저 스크린샷</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">[PS4] 저지아이즈</a></li>
+                                    <li><a href="#">[PC] 요즘 잼있게하고있는 링오브엘리시움!!</a></li>
+                                    <li><a href="#">[NS] 갓이터3 평보다 잼있네요</a></li>
+                                    <li><a href="#">[PC] 배트맨 아캄 오리진</a></li>
+                                    <li><a href="#">[PS4] EVE 리버스 테러 (스으으압)</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3"><h1 class="title">유저 동영상</h1>
+                                <ul class="col-md-12 list_issue">
+                                    <li><a href="#">[PS] 007: 네버 다이 공략 # 1</a></li>
+                                    <li><a href="#">[아이패드] [뱅드림] 푸른서표 (익스퍼트)</a></li>
+                                    <li><a href="#">[아이패드] [뱅드림]1/3의 순수한 감정(익스퍼트)</a></li>
+                                    <li><a href="#">[PS4] UFC3 헤비급 챔피언 도전기 #1 마이커리어</a></li>
+                                    <li><a href="#">[PCO] 아바 온라인 AK47 Saratoga 콜드 케이스 무편집</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h1 class="title">게임 방송</h1>
+                                <div class="col-md-6">
+                                    <ul class="col-md-12 list_issue">
+                                        <li><a href="#">[트위치] [LIVE]비키니흑누나&사랑과 19금이 함께하는</a></li>
+                                        <li><a href="#">[유튜브] [난동라이프] 하하하 부럽죠?! 소드아트 온라인</a></li>
+                                        <li><a href="#">[유튜브] 오늘의 몽글몽글 태에에엥(?) 입니다.</a></li>
+                                        <li><a href="#">[유튜브] "캡콤 캐릭터 총 출동!" Teppen 간단리뷰</a></li>
+                                        <li><a href="#">[트위치] 슈퍼마리오메이커2 초보 플레이 (스토리모드 중)</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="col-md-12 list_issue">
+                                        <li><a href="#">[트위치] 양파인간의 게임 [ 공작 + 지구방위군5 ] 방송입</a></li>
+                                        <li><a href="#">[트위치] 슥뿍] 종합게임 방송 [ 레인보우식스 시즈 후 롤</a></li>
+                                        <li><a href="#">[트위치] 아리 닮은 매운 맛♡ 차야랑 같이 롤 할래요?</a></li>
+                                        <li><a href="#">[트위치] =ↀωↀ=)つ일단밥 잠시후 The Sinking City</a></li>
+                                        <li><a href="#">[트위치] 초보 롤토체스 노가리 소통 방송 (체스는 거들뿐</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1 class="title">마이피</h1>
+                                <div class="col-md-6">
+                                    <ul class="col-md-12 list_issue">
+                                        <li><a href="#">이걸 화석을 넘어서 석유라고 불러야 하나?</a></li>
+                                        <li><a href="#">한일관계 고찰</a></li>
+                                        <li><a href="#">일본 현정권 아베가 노리는것은 전쟁, 분쟁, 갈등, 다툼..</a></li>
+                                        <li><a href="#">고교야구 - 청룡기를 뒤흔든 2학년 좌완 투수 김진욱</a></li>
+                                        <li><a href="#">F1 2019 R10 영국 그랑프리 레이스 결과</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="col-md-12 list_issue">
+                                        <li><a href="#">천사소녀 네티 전체 줄거리</a></li>
+                                        <li><a href="#">이번주 장만월 인스타그램</a></li>
+                                        <li><a href="#">오늘의 운동.</a></li>
+                                        <li><a href="#">짱짱 멋진 청하 Snapping 안무영상 ㅎㅎ</a></li>
+                                        <li><a href="#">고유정 사건 총정리.jpg</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--본문 끝-->
+            <!--footer-->
+            <footer class="footer_background">
+                <div class="container">
+                    <div>
+                        <ul class="col-md-12 footer_links">
+                            <li class="footer_title"><a href="#">개인정보취급방침</a></li>
+                            <li class="row footer_links"><a href="#">청소년보호정책</a></li>
+                            <li class="row footer_links"><a href="#">이용약관</a></li>
+                            <li class="row footer_links"><a href="#">기사제보/Press</a></li>
+                            <li class="row footer_links"><a href="#">광고/제휴문의</a></li>
+                            <li class="row footer_links"><a href="#">고객센터</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="col-md-12 footer_links">
+                            <li class="footer_title"><a href="#">루리웹닷컴</a></li>
+                            <li class="row footer_links"><a href="#">서울시 송파구 올림픽로35가길 10 B-602</a></li>
+                            <li class="row footer_links"><a href="#">등록번호 서울 아02156</a></li>
+                            <li class="row footer_links"><a href="#">발행인 박병욱</a></li>
+                            <li class="row footer_links"><a href="#">편집인 이장원</a></li>
+                            <li class="row footer_links"><a href="#">청소년보호책임자 진인환</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="col-md-12 footer_links">
+                            <li class="footer_title"><a href="#">루리웹소개</a></li>
+                            <li class="row footer_links"><a href="#">루리웹RSS</a></li>
+                            <li class="row footer_links"><a href="#">등록일 2012.06.13</a></li>
+                        </ul>
+                    </div>
+                    <div class="row copyright">
+                        <p>위 내용에 대한 저작권 및 법적 책임은 자료제공사 또는 글쓴이에 있으며 ruliweb의 입장과 다를 수 있습니다.</p>
+                        <p>Copyright ⓒ www.ruliweb.com All rights reserved.</p>
+                    </div>
+                </div>
+            </footer> 
+        </body>
+    </html>
+</doctype>
